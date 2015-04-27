@@ -249,6 +249,14 @@ var WifiWizard = {
         cordova.exec(win, fail, 'WifiWizard', 'getConnectedSSID', []);
     },
 
+    getConnectedWifiInfo: function(successFunc,errorFunc){
+        cordova.exec(successFunc,errorFunc,"WifiWorker","getConnectedWifiInfo",[]);
+    },
+
+    getConnectedWifiInfo2: function(successFunc,errorFunc){
+        cordova.exec(successFunc,errorFunc,"WifiWorker","getSSIDinfo",[]);
+    },
+
     /**
      *  Gets 'true' or 'false' if WiFi is enabled or disabled
      * @param 	win	callback function
